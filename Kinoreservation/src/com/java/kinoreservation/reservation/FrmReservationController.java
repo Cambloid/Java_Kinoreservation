@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package kinoreservation;
+package com.java.kinoreservation.reservation;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,12 +11,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 
 /**
  *
  * @author Phillip.Thomas
  */
-public class FrmMainController implements Initializable {
+public class FrmReservationController implements Initializable {
     
     @FXML
     private Label label;
@@ -25,6 +26,7 @@ public class FrmMainController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
+        label.setFont(Font.font("Verdana", 20));
     }
     
     @Override
