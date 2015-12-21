@@ -6,14 +6,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.usercontrol.FrmUserControlController">
    <children>
-      <Button layoutX="466.0" layoutY="449.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="125.0" text="Person hinzufügen" AnchorPane.bottomAnchor="12.0" AnchorPane.rightAnchor="11.0" />
-      <TextField layoutX="93.0" layoutY="418.0" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="93.0" />
-      <TextField layoutX="93.0" layoutY="449.0" AnchorPane.bottomAnchor="12.0" AnchorPane.leftAnchor="93.0" />
-      <Label layoutX="22.0" layoutY="422.0" prefHeight="17.0" prefWidth="60.0" text="Vorname:" AnchorPane.bottomAnchor="47.0" AnchorPane.leftAnchor="22.0" />
-      <Label layoutX="22.0" layoutY="453.0" prefHeight="17.0" prefWidth="60.0" text="Nachname:" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="22.0" />
+      <Button layoutX="433.0" layoutY="448.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="155.0" text="Person hinzufügen" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="14.0" />
+      <TextField layoutX="117.0" layoutY="418.0" prefHeight="27.0" prefWidth="218.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="117.0" />
+      <TextField layoutX="117.0" layoutY="449.0" prefHeight="27.0" prefWidth="218.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="117.0" />
+      <Label layoutX="33.0" layoutY="423.0" prefHeight="17.0" prefWidth="70.0" text="Vorname:" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="33.0" />
+      <Label layoutX="22.0" layoutY="453.0" prefHeight="17.0" prefWidth="77.0" text="Nachname:" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="22.0" />
       <ListView layoutX="14.0" layoutY="14.0" prefHeight="394.0" prefWidth="577.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
    </children>
 </AnchorPane>

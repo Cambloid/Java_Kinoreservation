@@ -5,13 +5,17 @@
  */
 package com.java.kinoreservation.menu;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.text.Font;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 /**
  *
@@ -20,18 +24,34 @@ import javafx.scene.text.Font;
 public class FrmMenuController implements Initializable {
     
     @FXML
-    private Label label;
+    private Button btnReservationErstellen;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-        label.setFont(Font.font("Verdana", 20));
+    private Button btnReservationAnzeigen;
+    
+    
+    private void showUserControl() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/java/kinoreservation/usercontrol/FrmUserControl.fxml"));
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    
+    @FXML
+    private void btnReservationErstellen_Clicked() throws IOException {
+        this.showUserControl();
+    }
+    
+    @FXML
+    private void btnReservationAnzeigen_Clicked() {
+         
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        
+    }
 }
