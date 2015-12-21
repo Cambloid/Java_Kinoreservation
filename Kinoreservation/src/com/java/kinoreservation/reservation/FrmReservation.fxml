@@ -19,5 +19,15 @@
             </Label>
          </children>
       </Pane>
+      <Button fx:id="btnS1" layoutX="327.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS1_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="1" />
+      <Button fx:id="btnS2" layoutX="381.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS2_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="2" />
+      <Button fx:id="btnS4" layoutX="489.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS4_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="4" />
+      <Button fx:id="btnS3" layoutX="435.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS3_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="3" />
+      <Button fx:id="btnS5" layoutX="543.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS5_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="5" />
+      <Button fx:id="btnS10" layoutX="543.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS10_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="10" />
+      <Button fx:id="btnS8" layoutX="435.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS8_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="8" />
+      <Button fx:id="btnS9" layoutX="489.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS9_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="9" />
+      <Button fx:id="btnS7" layoutX="381.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS7_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="7" />
+      <Button fx:id="btnS6" layoutX="327.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS6_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="6" />
     </children>
 </AnchorPane>

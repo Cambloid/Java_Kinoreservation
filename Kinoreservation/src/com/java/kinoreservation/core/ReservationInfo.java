@@ -11,13 +11,13 @@ import java.util.ArrayList;
  *
  * @author Celvin
  */
-public class ReservationsInfo {
+public class ReservationInfo {
     
     private String             vorname;
     private String             nachname;
     private ArrayList<Integer> sitzNummer = new ArrayList<Integer>();
     
-    public ReservationsInfo() {  }
+    public ReservationInfo() {  }
     
     public String getVorname() {
         return vorname;

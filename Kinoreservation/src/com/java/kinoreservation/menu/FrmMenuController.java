@@ -5,6 +5,7 @@
  */
 package com.java.kinoreservation.menu;
 
+import com.java.kinoreservation.usercontrol.FrmUserControlController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -31,14 +32,20 @@ public class FrmMenuController implements Initializable {
     
     
     private void showUserControl() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/com/java/kinoreservation/usercontrol/FrmUserControl.fxml"));
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/java/kinoreservation/usercontrol/FrmUserControl.fxml"));
+        Parent root = (Parent)loader.load();
+        
         Scene scene = new Scene(root);
         Stage stage = new Stage();
+        
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
         stage.show();
+        
+        FrmUserControlController controller = (FrmUserControlController)loader.getController();
+
     }
-    
     
     @FXML
     private void btnReservationErstellen_Clicked() throws IOException {

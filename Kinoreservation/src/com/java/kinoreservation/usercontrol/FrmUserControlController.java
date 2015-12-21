@@ -5,14 +5,21 @@
  */
 package com.java.kinoreservation.usercontrol;
 
-import com.java.kinoreservation.menu.*;
+import com.java.kinoreservation.core.ReservationInfo;
+import com.java.kinoreservation.core.UserReservationCollection;
+import com.java.kinoreservation.reservation.FrmReservationController;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.text.Font;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 /**
  *
@@ -20,14 +27,36 @@ import javafx.scene.text.Font;
  */
 public class FrmUserControlController implements Initializable {
     
-    @FXML
-    private Label label;
+    @FXML private Button btnAddPerson;
+    @FXML private TextField txtVorname;
+    @FXML private TextField txtNachname;
+    
+    private void showReservation() throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/java/kinoreservation/reservation/FrmReservation.fxml"));
+        Parent root = (Parent)loader.load();
+        
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
+        
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.setScene(scene);
+        stage.show();
+        
+        FrmReservationController controller = (FrmReservationController)loader.getController();
+        
+        ReservationInfo info = new ReservationInfo();
+        
+        info.setVorname(txtVorname.getText());
+        info.setNachname(txtNachname.getText());
+        
+        UserReservationCollection.getInstance().addReservation(info);
+        
+    }
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-        label.setFont(Font.font("Verdana", 20));
+    private void btnAddPerson_Clicked() throws IOException {
+        this.showReservation();
     }
     
     @Override
