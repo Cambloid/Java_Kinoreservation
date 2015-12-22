@@ -27,14 +27,27 @@ import javafx.stage.Stage;
  */
 public class FrmUserControlController implements Initializable {
     
-    @FXML private Button btnAddPerson;
+    @FXML private Button    btnAddPerson;
     @FXML private TextField txtVorname;
     @FXML private TextField txtNachname;
+    
+    private FrmReservationController controller = null;
+    
+    private void addPerson() {
+        ReservationInfo info = new ReservationInfo();
+        
+        info.setVorname(txtVorname.getText());
+        info.setNachname(txtNachname.getText());
+        info.setSeats(controller.getSeats());
+        
+        UserReservationCollection.getInstance().addReservation(info);
+        
+    }
     
     private void showReservation() throws IOException {
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/java/kinoreservation/reservation/FrmReservation.fxml"));
-        Parent root = (Parent)loader.load();
+        Parent     root   = (Parent)loader.load();
         
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -43,15 +56,10 @@ public class FrmUserControlController implements Initializable {
         stage.setScene(scene);
         stage.show();
         
-        FrmReservationController controller = (FrmReservationController)loader.getController();
+        this.controller = (FrmReservationController)loader.getController();
+        this.controller.setTakenSeats(UserReservationCollection.getInstance().getAllTakenSeats());
         
-        ReservationInfo info = new ReservationInfo();
-        
-        info.setVorname(txtVorname.getText());
-        info.setNachname(txtNachname.getText());
-        
-        UserReservationCollection.getInstance().addReservation(info);
-        
+        this.addPerson();
     }
     
     @FXML

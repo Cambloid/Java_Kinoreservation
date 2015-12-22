@@ -15,9 +15,10 @@ public class ReservationInfo {
     
     private String             vorname;
     private String             nachname;
+    private boolean[]          seats;
     private ArrayList<Integer> sitzNummer = new ArrayList<Integer>();
     
-    public ReservationInfo() {  }
+    public ReservationInfo() {}
     
     public String getVorname() {
         return vorname;
@@ -33,6 +34,14 @@ public class ReservationInfo {
 
     public void setNachname(String nachname) {
         this.nachname = nachname;
+    }
+    
+    public boolean[] getSeats() {
+        return this.seats;
+    }
+
+    public void setSeats(boolean[] Seats) {
+        this.seats = Seats;
     }
     
     public ArrayList<Integer> getSitze() {

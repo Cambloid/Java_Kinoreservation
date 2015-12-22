@@ -38,4 +38,30 @@ public class UserReservationCollection {
     public void removeReservation(int index) {
         this.reservationCollection.remove(index);
     }
+    
+    public boolean[] getAllTakenSeats() {
+        boolean[] takenSeats = {
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+        };
+        for(ReservationInfo info : this.reservationCollection) {
+            int index = 0;
+            for(boolean takenSeat : info.getSeats()) {
+                if(takenSeat) {
+                    takenSeats[index] = true;
+                }
+                index++;
+            }
+        }
+        
+        return takenSeats;
+    }
 }
