@@ -40,6 +40,7 @@ public class UserReservationCollection {
     }
     
     public boolean[] getAllTakenSeats() {
+        
         boolean[] takenSeats = {
             false,
             false,
@@ -52,6 +53,7 @@ public class UserReservationCollection {
             false,
             false,
         };
+        
         for(ReservationInfo info : this.reservationCollection) {
             int index = 0;
             for(boolean takenSeat : info.getSeats()) {
