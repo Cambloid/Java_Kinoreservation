@@ -48,8 +48,8 @@ public class FrmUserControlController implements Initializable {
     }
     
     private void addPerson() {
-        ReservationInfo info = new ReservationInfo();
         
+        ReservationInfo info = new ReservationInfo();
         info.setVorname(txtVorname.getText());
         info.setNachname(txtNachname.getText());
         info.setSeats(controller.getSeats());

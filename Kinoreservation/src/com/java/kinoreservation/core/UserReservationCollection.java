@@ -55,8 +55,11 @@ public class UserReservationCollection {
         };
         
         for(ReservationInfo info : this.reservationCollection) {
+            
             int index = 0;
+            
             for(boolean takenSeat : info.getSeats()) {
+                
                 if(takenSeat) {
                     takenSeats[index] = true;
                 }
