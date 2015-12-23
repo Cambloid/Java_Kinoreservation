@@ -15,11 +15,15 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.VBoxBuilder;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -58,6 +62,36 @@ public class FrmUserControlController implements Initializable {
         
     }
     
+    private boolean validateFields() {
+        boolean valid = true;
+        String msg = "Das Feld: \r\n";
+        
+        if(this.txtVorname.getText().equals("")) {
+            msg += "Vorname\r\n";
+            valid = false;
+        }
+        if(this.txtNachname.getText().equals("")) {
+            msg += "Nachname\r\n";
+            valid = false;
+        }
+        
+        msg += "darf nicht leer sein.";
+        
+        if(!valid) {
+            /*
+            Stage dialogStage = new Stage();
+            dialogStage.initModality(Modality.WINDOW_MODAL);
+            dialogStage.setScene(new Scene(VBoxBuilder.create().
+            children(new Text(msg), new Button("OK")).
+            alignment(Pos.CENTER).padding(new Insets(5)).build()));
+            dialogStage.show();*/
+            
+            
+        }
+        
+        return valid;
+    }
+    
     private void showReservation() throws IOException {
         
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/java/kinoreservation/reservation/FrmReservation.fxml"));
@@ -71,15 +105,18 @@ public class FrmUserControlController implements Initializable {
         stage.show();
         
         this.controller = (FrmReservationController)loader.getController();
+        this.controller.setStage(stage);
         this.controller.setTakenSeats(UserReservationCollection.getInstance().getAllTakenSeats());
         
-        this.addPerson();
         
     }
     
     @FXML
     private void btnAddPerson_Clicked() throws IOException {
         this.showReservation();
+        if(this.validateFields()) {
+          this.addPerson();
+        }
     }
    
     @FXML

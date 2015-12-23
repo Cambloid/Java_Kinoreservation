@@ -8,9 +8,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="382.0" prefWidth="913.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.reservation.FrmReservationController">
+<AnchorPane id="AnchorPane" prefHeight="282.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.reservation.FrmReservationController">
     <children>
-      <Pane layoutX="306.0" layoutY="-3.0" prefHeight="35.0" prefWidth="302.0" style="-fx-background-color: grey;">
+      <Pane layoutX="146.0" prefHeight="35.0" prefWidth="302.0" style="-fx-background-color: grey;">
          <children>
             <Label layoutX="120.0" layoutY="-1.0" prefHeight="36.0" prefWidth="78.0" text="Vorne" textFill="WHITE">
                <font>
@@ -19,15 +19,16 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="btnS1" layoutX="327.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS1_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="1" />
-      <Button fx:id="btnS2" layoutX="381.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS2_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="2" />
-      <Button fx:id="btnS4" layoutX="489.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS4_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="4" />
-      <Button fx:id="btnS3" layoutX="435.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS3_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="3" />
-      <Button fx:id="btnS5" layoutX="543.0" layoutY="88.0" mnemonicParsing="false" onMouseClicked="#btnS5_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="5" />
-      <Button fx:id="btnS10" layoutX="543.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS10_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="10" />
-      <Button fx:id="btnS8" layoutX="435.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS8_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="8" />
-      <Button fx:id="btnS9" layoutX="489.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS9_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="9" />
-      <Button fx:id="btnS7" layoutX="381.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS7_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="7" />
-      <Button fx:id="btnS6" layoutX="327.0" layoutY="147.0" mnemonicParsing="false" onMouseClicked="#btnS6_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="6" />
+      <Button fx:id="btnS1" layoutX="167.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS1_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="1" />
+      <Button fx:id="btnS2" layoutX="221.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS2_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="2" />
+      <Button fx:id="btnS4" layoutX="329.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS4_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="4" />
+      <Button fx:id="btnS3" layoutX="275.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS3_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="3" />
+      <Button fx:id="btnS5" layoutX="383.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS5_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="5" />
+      <Button fx:id="btnS10" layoutX="383.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS10_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="10" />
+      <Button fx:id="btnS8" layoutX="275.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS8_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="8" />
+      <Button fx:id="btnS9" layoutX="329.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS9_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="9" />
+      <Button fx:id="btnS7" layoutX="221.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS7_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="7" />
+      <Button fx:id="btnS6" layoutX="167.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS6_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="6" />
+      <Button fx:id="btnSpeichern" layoutX="487.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#btnSpeichern_Clicked" prefHeight="25.0" prefWidth="93.0" text="Speichern" />
     </children>
 </AnchorPane>
