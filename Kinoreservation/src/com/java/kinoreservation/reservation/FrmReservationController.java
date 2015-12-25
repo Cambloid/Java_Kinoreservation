@@ -16,12 +16,17 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 
 /**
  *
  * @author Phillip.Thomas
  */
 public class FrmReservationController implements Initializable {
+    
+    private boolean preview = false;
+    
+    private Stage stage = null;
     
     private boolean[] taken = {
         false,
@@ -60,93 +65,101 @@ public class FrmReservationController implements Initializable {
     @FXML private Button btnS9;
     @FXML private Button btnS10;
     
+    @FXML private Button btnSave;
+    
     private void setState(Button btn, int index) {
-       if(btn.getStyle().equals("-fx-background-color: lightgreen;")) {
-           btn.setStyle("-fx-background-color: yellow;");
-           this.customer[index] = true;
-       } else {
-           btn.setStyle("-fx-background-color: lightgreen;");
-           this.customer[index] = false;
-       }
+        if(!preview) {
+            if(btn.getStyle().equals("-fx-background-color: lightgreen;")) {
+                btn.setStyle("-fx-background-color: yellow;");
+                this.customer[index] = true;
+            } else {
+                btn.setStyle("-fx-background-color: lightgreen;");
+                this.customer[index] = false;
+            }
+        }
     }
     
-    @FXML
-    private void btnS1_Clicked() {
+    @FXML private void btnS1_Clicked() {
         if(!this.taken[0]) {
             this.setState(btnS1, 0);
         }
     }
     
-    @FXML
-    private void btnS2_Clicked() {
+    @FXML private void btnS2_Clicked() {
         if(!this.taken[1]) {
             this.setState(btnS2, 1);
         }
     }
     
-    @FXML
-    private void btnS3_Clicked() {
+    @FXML private void btnS3_Clicked() {
         if(!this.taken[2]) {
             this.setState(btnS3, 2);
         }
     }
     
-    @FXML
-    private void btnS4_Clicked() {
+    @FXML private void btnS4_Clicked() {
         if(!this.taken[3]) {
             this.setState(btnS4, 3);
         }
     }
     
-    @FXML
-    private void btnS5_Clicked() {
+    @FXML private void btnS5_Clicked() {
         if(!this.taken[4]) {
             this.setState(btnS5, 4);
         }
     }
     
-    @FXML
-    private void btnS6_Clicked() {
+    @FXML private void btnS6_Clicked() {
         if(!this.taken[5]) {
             this.setState(btnS6, 5);
         }
     }
     
-    @FXML
-    private void btnS7_Clicked() {
+    @FXML private void btnS7_Clicked() {
         if(!this.taken[6]) {
             this.setState(btnS7, 6);
         } 
     }
     
-    @FXML
-    private void btnS8_Clicked() {
+    @FXML private void btnS8_Clicked() {
         if(!this.taken[7]) {
             this.setState(btnS8, 7);
         }
     }
     
-    @FXML
-    private void btnS9_Clicked() {
+    @FXML private void btnS9_Clicked() {
         if(!this.taken[8]) {
             this.setState(btnS9, 8);
         }
     }
     
-    @FXML
-    private void btnS10_Clicked() {
+    @FXML private void btnS10_Clicked() {
         if(!this.taken[9]) {
             this.setState(btnS10, 9);
         }
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    @FXML private void btnSave_Clicked() {
+        if(stage != null) {
+            stage.close();
+        }
+     }
+    
+    @Override public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }
     
     public boolean[] getSeats() {
         return this.customer;
+    }
+    
+    public void preview() {
+        this.btnSave.setVisible(false);
+        this.preview = true;
+    }
+    
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
     
     public void setTakenSeats(boolean[] takenSeats) {

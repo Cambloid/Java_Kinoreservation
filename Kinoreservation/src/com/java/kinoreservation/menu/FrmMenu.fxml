@@ -8,7 +8,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.menu.FrmMenuController">
     <children>
-      <Button layoutX="33.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#btnReservationErstellen_Clicked" prefHeight="25.0" prefWidth="151.0" text="Neue Reservation" />
-      <Button layoutX="33.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#btnReservationAnzeigen_Clicked" prefHeight="25.0" prefWidth="151.0" text="Reservationen anzeigen" />
+      <Button layoutX="33.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#btnReservationErstellen_Clicked" prefHeight="27.0" prefWidth="187.0" text="Neue Reservation" />
+      <Button layoutX="33.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#btnReservationAnzeigen_Clicked" prefHeight="27.0" prefWidth="187.0" text="Reservationen anzeigen" />
     </children>
 </AnchorPane>
