@@ -5,10 +5,12 @@
  */
 package com.java.kinoreservation.core;
 
+import com.java.kinoreservation.menu.FrmMenuController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
@@ -20,10 +22,18 @@ public class Kinoreservation extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         
-       Parent root = FXMLLoader.load(getClass().getResource("/com/java/kinoreservation/menu/FrmMenu.fxml"));
-       Scene scene = new Scene(root);
-       stage.setScene(scene);
-       stage.show();
+       FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/java/kinoreservation/menu/FrmMenu.fxml"));
+       Parent root = (Parent)loader.load();
+        
+        Scene scene = new Scene(root);
+        Stage stageMenu = new Stage();
+        
+        FrmMenuController controller = (FrmMenuController)loader.getController();
+        controller.setStage(stageMenu);
+        
+        stageMenu.initModality(Modality.APPLICATION_MODAL);
+        stageMenu.setScene(scene);
+        stageMenu.showAndWait();
        
     }
 

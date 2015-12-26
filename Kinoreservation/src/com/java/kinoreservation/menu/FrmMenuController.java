@@ -10,9 +10,7 @@ import com.java.kinoreservation.reservation.FrmReservationController;
 import com.java.kinoreservation.usercontrol.FrmUserControlController;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashSet;
 import java.util.ResourceBundle;
-import java.util.Set;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -28,6 +26,8 @@ import javafx.stage.Stage;
  */
 public class FrmMenuController implements Initializable {
     
+    private Stage stage = null;
+    
     @FXML private Button btnReservationErstellen;
     @FXML private Button btnReservationAnzeigen;
     
@@ -39,12 +39,12 @@ public class FrmMenuController implements Initializable {
         Scene scene = new Scene(root);
         Stage stage = new Stage();
         
+        FrmUserControlController controller = (FrmUserControlController)loader.getController();
+        controller.setStage(stage);
+        
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
         stage.showAndWait();
-        
-        FrmUserControlController controller = (FrmUserControlController)loader.getController();
-
     }
     
     private void showReservations() throws IOException {
@@ -64,20 +64,27 @@ public class FrmMenuController implements Initializable {
         stage.setScene(scene);
         
         stage.showAndWait();
-        
-        
+    }
+    
+    public void setStage(Stage stage) {
+        this.stage = stage;        
     }
     
     @FXML private void btnReservationErstellen_Clicked() throws IOException {
         this.showUserControl();
     }
     
+    @FXML private void btnClose_Clicked() {
+        if(this.stage != null) {
+            this.stage.close();
+        }
+    }
+    
     @FXML private void btnReservationAnzeigen_Clicked() throws IOException {
          this.showReservations();
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    @Override public void initialize(URL url, ResourceBundle rb) {
         
     }
 }

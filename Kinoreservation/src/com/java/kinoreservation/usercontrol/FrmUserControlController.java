@@ -10,9 +10,7 @@ import com.java.kinoreservation.core.UserReservationCollection;
 import com.java.kinoreservation.reservation.FrmReservationController;
 import java.io.IOException;
 import java.net.URL;
-import java.util.HashSet;
 import java.util.ResourceBundle;
-import java.util.Set;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,13 +31,15 @@ import javafx.stage.Stage;
  */
 public class FrmUserControlController implements Initializable {
     
-    @FXML private Button    btnAddPerson;
-    @FXML private Button    btnRemovePerson;
-    @FXML private TextField txtVorname;
-    @FXML private TextField txtNachname;
+    @FXML private Button           btnAddPerson;
+    @FXML private Button           btnSave;
+    @FXML private Button           btnRemovePerson;
+    @FXML private TextField        txtVorname;
+    @FXML private TextField        txtNachname;
     @FXML private ListView<String> lstKunden;
     
     private FrmReservationController controller = null;
+    private Stage stage = null;
     
     private void fillList() {
        ObservableList<String> items = lstKunden.getItems();
@@ -48,17 +48,18 @@ public class FrmUserControlController implements Initializable {
        for(ReservationInfo info : UserReservationCollection.getInstance().getReservations()) {
            int i = 1;
            String sitz = "Sitz: ";
+           boolean firstSeat = true;
            for(boolean takenSeat : info.getSeats()) {
-               if(takenSeat) {
-                   if(i == 1) {
-                     sitz += Integer.toString(i);
-                   } else {
-                       sitz += "," + Integer.toString(i);
-                   }
-               }
-               i++;
-           }
-           
+                if(takenSeat) {
+                    if(firstSeat) {
+                        sitz += Integer.toString(i);
+                        firstSeat = false;
+                    } else {
+                        sitz += "," + Integer.toString(i);
+                    }
+                }
+            i++;
+           }           
            items.add(info.getVorname() + " " + info.getNachname() + " " + sitz);
        }
        
@@ -123,6 +124,10 @@ public class FrmUserControlController implements Initializable {
         
     }
     
+    public void setStage(Stage stage) {
+        this.stage = stage;        
+    }
+    
     @FXML private void btnAddPerson_Clicked() throws IOException {
         if(this.validateFields()) {
             this.showReservation();
@@ -131,7 +136,13 @@ public class FrmUserControlController implements Initializable {
             this.fillList();
         }
     }
-   
+    
+    @FXML private void btnSave_Clicked() {
+       if(this.stage != null) {
+            this.stage.close();
+       }      
+    }
+    
     @FXML private void btnRemovePerson_Clicked() throws IOException {
         if(this.lstKunden.getSelectionModel().getSelectedIndex() != -1) {
             int index = this.lstKunden.getSelectionModel().getSelectedIndex();
@@ -140,9 +151,8 @@ public class FrmUserControlController implements Initializable {
         }
     }
     
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+    @Override public void initialize(URL url, ResourceBundle rb) {
+        this.fillList();
+    }
     
 }

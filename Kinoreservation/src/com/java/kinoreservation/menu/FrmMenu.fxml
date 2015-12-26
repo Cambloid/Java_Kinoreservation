@@ -8,7 +8,8 @@
 
 <AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.menu.FrmMenuController">
     <children>
-      <Button layoutX="33.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#btnReservationErstellen_Clicked" prefHeight="27.0" prefWidth="187.0" text="Neue Reservation" />
-      <Button layoutX="33.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#btnReservationAnzeigen_Clicked" prefHeight="27.0" prefWidth="187.0" text="Reservationen anzeigen" />
+      <Button layoutX="33.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#btnReservationErstellen_Clicked" prefHeight="27.0" prefWidth="187.0" text="Neue Reservation" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="38.0" />
+      <Button layoutX="33.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#btnReservationAnzeigen_Clicked" prefHeight="27.0" prefWidth="187.0" text="Reservationen anzeigen" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="78.0" />
+      <Button fx:id="btnClose" layoutX="33.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#btnClose_Clicked" prefHeight="27.0" prefWidth="187.0" text="Beenden" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="118.0" />
     </children>
 </AnchorPane>

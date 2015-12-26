@@ -11,10 +11,6 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 /**
@@ -62,8 +58,7 @@ public class FrmReservationController implements Initializable {
     @FXML private Button btnS7;
     @FXML private Button btnS8;
     @FXML private Button btnS9;
-    @FXML private Button btnS10;
-    
+    @FXML private Button btnS10;    
     @FXML private Button btnSave;
     
     private void setState(Button btn, int index) {
