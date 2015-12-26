@@ -8,27 +8,42 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="297.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.reservation.FrmReservationController">
+<AnchorPane id="AnchorPane" prefHeight="297.0" prefWidth="678.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.reservation.FrmReservationController">
     <children>
+      <Pane layoutX="29.0" layoutY="6.0" prefHeight="214.0" prefWidth="620.0" style="-fx-background-color: white;">
+         <children>
+            <Button fx:id="btnS1" layoutX="181.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#btnS1_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="1" />
+            <Button fx:id="btnS2" layoutX="235.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#btnS2_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="2" />
+            <Button fx:id="btnS4" layoutX="343.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#btnS4_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="4" />
+            <Button fx:id="btnS3" layoutX="289.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#btnS3_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="3" />
+            <Button fx:id="btnS5" layoutX="397.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#btnS5_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="5" />
+            <Button fx:id="btnS10" layoutX="397.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#btnS10_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="5" />
+            <Button fx:id="btnS8" layoutX="289.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#btnS8_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="3" />
+            <Button fx:id="btnS9" layoutX="343.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#btnS9_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="4" />
+            <Button fx:id="btnS7" layoutX="235.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#btnS7_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="2" />
+            <Button fx:id="btnS6" layoutX="181.0" layoutY="123.0" mnemonicParsing="false" onMouseClicked="#btnS6_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="1" />
+            <Label layoutX="457.0" layoutY="78.0" prefHeight="17.0" prefWidth="50.0" text="Reihe 1" />
+            <Label layoutX="457.0" layoutY="137.0" prefHeight="17.0" prefWidth="44.0" text="Reihe 2" />
+            <Label layoutX="14.0" layoutY="70.0" prefHeight="17.0" prefWidth="121.0" text="Preis pro Sitz : 16Fr.-" />
+            <Label layoutX="35.0" layoutY="183.0" text="Frei" />
+            <Label layoutX="257.0" layoutY="183.0" prefHeight="17.0" prefWidth="72.0" text="Ausgewählt" />
+            <Label layoutX="471.0" layoutY="183.0" prefHeight="17.0" prefWidth="59.0" text="Besetzt" />
+            <Button layoutX="14.0" layoutY="179.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="21.0" style="-fx-background-color: lightgreen;" />
+            <Button layoutX="235.0" layoutY="179.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="21.0" style="-fx-background-color: skyblue;" />
+            <Button layoutX="447.0" layoutY="179.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="21.0" style="-fx-background-color: red;" />
+         </children>
+      </Pane>
       <Pane layoutX="188.0" prefHeight="35.0" prefWidth="302.0" style="-fx-background-color: grey;">
          <children>
-            <Label layoutX="120.0" layoutY="-1.0" prefHeight="36.0" prefWidth="78.0" text="Vorne" textFill="WHITE">
+            <Label layoutX="91.0" layoutY="-1.0" prefHeight="36.0" prefWidth="161.0" text="Leinwand" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Button fx:id="btnS1" layoutX="209.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS1_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="1" />
-      <Button fx:id="btnS2" layoutX="263.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS2_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="2" />
-      <Button fx:id="btnS4" layoutX="371.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS4_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="4" />
-      <Button fx:id="btnS3" layoutX="317.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS3_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="3" />
-      <Button fx:id="btnS5" layoutX="425.0" layoutY="91.0" mnemonicParsing="false" onMouseClicked="#btnS5_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="5" />
-      <Button fx:id="btnS10" layoutX="425.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS10_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="10" />
-      <Button fx:id="btnS8" layoutX="317.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS8_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="8" />
-      <Button fx:id="btnS9" layoutX="371.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS9_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="9" />
-      <Button fx:id="btnS7" layoutX="263.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS7_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="7" />
-      <Button fx:id="btnS6" layoutX="209.0" layoutY="150.0" mnemonicParsing="false" onMouseClicked="#btnS6_Clicked" prefHeight="44.0" prefWidth="44.0" style="-fx-background-color: lightgreen;" text="6" />
-      <Button fx:id="btnSave" layoutX="573.0" layoutY="256.0" mnemonicParsing="false" onMouseClicked="#btnSave_Clicked" prefHeight="27.0" prefWidth="91.0" text="Speichern" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="14.0" />
+      <Button fx:id="btnSave" layoutX="26.0" layoutY="248.0" mnemonicParsing="false" onMouseClicked="#btnSave_Clicked" prefHeight="27.0" prefWidth="209.0" style="-fx-background-color: skyblue;" text="Reservation bestätigen" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="443.0" />
+      <Label layoutX="43.0" layoutY="220.0" prefHeight="17.0" prefWidth="580.0" text="Zum Platz reservieren auf einen Sitz klicken" />
+      <Button layoutX="440.0" layoutY="249.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="209.0" style="-fx-background-color: skyblue;" text="Reservation abbrechen" />
     </children>
 </AnchorPane>

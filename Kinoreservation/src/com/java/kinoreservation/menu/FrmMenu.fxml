@@ -6,11 +6,18 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="578.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.menu.FrmMenuController">
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="578.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.menu.FrmMenuController">
     <children>
-      <Button layoutX="33.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#btnReservationErstellen_Clicked" prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: skyblue;" text="Neue Reservation" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="38.0" />
-      <Button layoutX="33.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#btnReservationAnzeigen_Clicked" prefHeight="27.0" prefWidth="187.0" text="Reservationen anzeigen" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="78.0" />
-      <Button fx:id="btnClose" layoutX="33.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#btnClose_Clicked" prefHeight="27.0" prefWidth="187.0" text="Beenden" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="118.0" />
-      <Label layoutX="360.0" layoutY="30.0" prefHeight="144.0" prefWidth="203.0" text="Label" />
+      <Button graphicTextGap="0.0" layoutX="33.0" layoutY="38.0" mnemonicParsing="false" onMouseClicked="#btnReservationErstellen_Clicked" prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: skyblue;" text="Sitzreservation" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="38.0" />
+      <Button layoutX="33.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#btnReservationAnzeigen_Clicked" prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: skyblue;" text="Übersicht" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="78.0" />
+      <Button fx:id="btnClose" layoutX="33.0" layoutY="118.0" mnemonicParsing="false" onMouseClicked="#btnClose_Clicked" prefHeight="27.0" prefWidth="187.0" style="-fx-background-color: skyblue;" text="Beenden" AnchorPane.leftAnchor="33.0" AnchorPane.topAnchor="118.0" />
+      <Label alignment="TOP_LEFT" layoutX="318.0" layoutY="30.0" prefHeight="144.0" prefWidth="245.0" style="-fx-background-color: turquoise;" text="Kino Thomas Schlienger House   " />
+      <Label layoutX="318.0" layoutY="123.0" prefHeight="17.0" prefWidth="245.0" text="Heute um 14 Uhr im Kino : Star Wars " />
+      <Label alignment="TOP_LEFT" layoutX="19.0" layoutY="214.0" prefHeight="109.0" prefWidth="546.0" style="-fx-background-color: skyblue;" text="Hier könnte ihre Werbung stehen! " />
+      <Label layoutX="329.0" layoutY="214.0" prefHeight="17.0" prefWidth="229.0" text="Sonderangebot : 2 Tickets für 1" />
+      <Label layoutX="19.0" layoutY="260.0" prefHeight="17.0" prefWidth="518.0" text="Der Film Star Wars läuft im 3. Kinosaal im 2. Stock" />
+      <Label layoutX="19.0" layoutY="299.0" prefHeight="17.0" prefWidth="455.0" text="Nur heute !!!! Maxi Popcorntüte für 5Fr.-" />
+      <Label layoutX="318.0" layoutY="52.0" prefHeight="17.0" prefWidth="223.0" text="Javastrasse 9" />
+      <Label layoutX="318.0" layoutY="70.0" text="9950 Javaisland" />
     </children>
 </AnchorPane>

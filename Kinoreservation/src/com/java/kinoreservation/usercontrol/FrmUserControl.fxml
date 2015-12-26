@@ -6,15 +6,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.usercontrol.FrmUserControlController">
+<AnchorPane id="AnchorPane" prefHeight="626.0" prefWidth="902.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.kinoreservation.usercontrol.FrmUserControlController">
    <children>
       <Button fx:id="btnAddPerson" layoutX="346.0" layoutY="589.0" mnemonicParsing="false" onMouseClicked="#btnAddPerson_Clicked" prefHeight="27.0" prefWidth="105.0" text="Reservieren" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="346.0" />
       <TextField fx:id="txtVorname" layoutX="117.0" layoutY="418.0" prefHeight="27.0" prefWidth="218.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="117.0" />
       <TextField fx:id="txtNachname" layoutX="117.0" layoutY="449.0" prefHeight="27.0" prefWidth="218.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="117.0" />
       <Label fx:id="lblVorname" layoutX="33.0" layoutY="423.0" prefHeight="17.0" prefWidth="70.0" text="Vorname:" AnchorPane.bottomAnchor="46.0" AnchorPane.leftAnchor="33.0" />
       <Label fx:id="lblNachname" layoutX="22.0" layoutY="453.0" prefHeight="17.0" prefWidth="77.0" text="Nachname:" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="22.0" />
-      <ListView fx:id="lstKunden" layoutX="14.0" layoutY="14.0" prefHeight="394.0" prefWidth="577.0" AnchorPane.bottomAnchor="78.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
-      <Button fx:id="btnRemovePerson" layoutX="801.0" layoutY="553.0" mnemonicParsing="false" onMouseClicked="#btnRemovePerson_Clicked" prefHeight="27.0" prefWidth="90.0" text="Löschen" AnchorPane.bottomAnchor="46.0" AnchorPane.rightAnchor="11.0" />
-      <Button fx:id="btnSave" layoutX="801.0" layoutY="588.0" mnemonicParsing="false" onMouseClicked="#btnSave_Clicked" prefHeight="27.0" prefWidth="90.0" text="Speichern" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="11.0" />
+      <ListView fx:id="lstKunden" layoutX="14.0" layoutY="14.0" prefHeight="487.0" prefWidth="877.0" style="-fx-background-color: skyblue;" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
+      <Button fx:id="btnRemovePerson" layoutX="749.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnRemovePerson_Clicked" prefHeight="27.0" prefWidth="142.0" text="Reservation löschen" AnchorPane.bottomAnchor="91.0" AnchorPane.rightAnchor="11.0" />
+      <Button fx:id="btnSave" layoutX="801.0" layoutY="588.0" mnemonicParsing="false" onMouseClicked="#btnSave_Clicked" prefHeight="27.0" prefWidth="142.0" text="Abbrechen" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="11.0" />
+      <Label layoutX="19.0" layoutY="513.0" prefHeight="17.0" prefWidth="663.0" text="Stornierung einer Reservation ist nur bis 30 Minuten vor Filmbeginn möglich!!!!!" />
    </children>
 </AnchorPane>
