@@ -38,6 +38,8 @@ public class FrmUserControlController implements Initializable {
     @FXML private TextField        txtNachname;
     @FXML private ListView<String> lstKunden;
     
+    private boolean isCanceled = false;
+    
     private FrmReservationController controller = null;
     private Stage stage = null;
     
@@ -123,6 +125,8 @@ public class FrmUserControlController implements Initializable {
         
         stage.showAndWait();
         
+        this.isCanceled = controller.isCanceled();
+        
     }
     
     public void setStage(Stage stage) {
@@ -132,7 +136,12 @@ public class FrmUserControlController implements Initializable {
     @FXML private void btnAddPerson_Clicked() throws IOException {
         if(this.validateFields()) {
             this.showReservation();
-            this.addPerson();
+            
+            if(!this.isCanceled) {
+                this.addPerson();
+            
+            }
+            
             this.clearFiels();
             this.fillList();
         }

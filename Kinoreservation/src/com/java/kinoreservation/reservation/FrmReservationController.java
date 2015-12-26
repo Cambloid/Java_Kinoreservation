@@ -19,6 +19,7 @@ import javafx.stage.Stage;
 public class FrmReservationController implements Initializable {
     
     private boolean preview = false;
+    private boolean isCanceled = false;
     
     private Stage stage = null;
     
@@ -59,6 +60,7 @@ public class FrmReservationController implements Initializable {
     @FXML private Button btnS9;
     @FXML private Button btnS10;    
     @FXML private Button btnSave;
+    @FXML private Button btnCancel;
     
     private void setState(Button btn, int index) {
         if(!preview) {
@@ -138,6 +140,14 @@ public class FrmReservationController implements Initializable {
         }
      }
     
+    @FXML private void btnCancel_Clicked() {
+        this.isCanceled = true;
+        
+        if(this.stage != null) {
+            this.stage.close();
+        }
+    }
+    
     @Override public void initialize(URL url, ResourceBundle rb) {
         
     }
@@ -148,7 +158,13 @@ public class FrmReservationController implements Initializable {
     
     public void preview() {
         this.btnSave.setVisible(false);
+        this.btnCancel.setVisible(false);
+        
         this.preview = true;
+    }
+    
+    public boolean isCanceled() {
+        return this.isCanceled;
     }
     
     public void setStage(Stage stage) {
