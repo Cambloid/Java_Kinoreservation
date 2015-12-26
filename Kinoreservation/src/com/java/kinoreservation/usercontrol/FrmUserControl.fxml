@@ -16,6 +16,6 @@
       <ListView fx:id="lstKunden" layoutX="14.0" layoutY="14.0" prefHeight="487.0" prefWidth="877.0" style="-fx-background-color: skyblue;" AnchorPane.bottomAnchor="125.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="14.0" />
       <Button fx:id="btnRemovePerson" layoutX="749.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#btnRemovePerson_Clicked" prefHeight="27.0" prefWidth="142.0" text="Reservation löschen" AnchorPane.bottomAnchor="91.0" AnchorPane.rightAnchor="11.0" />
       <Button fx:id="btnSave" layoutX="801.0" layoutY="588.0" mnemonicParsing="false" onMouseClicked="#btnSave_Clicked" prefHeight="27.0" prefWidth="142.0" text="Abbrechen" AnchorPane.bottomAnchor="11.0" AnchorPane.rightAnchor="11.0" />
-      <Label layoutX="19.0" layoutY="513.0" prefHeight="17.0" prefWidth="663.0" text="Stornierung einer Reservation ist nur bis 30 Minuten vor Filmbeginn möglich!!!!!" />
+      <Label layoutX="19.0" layoutY="513.0" prefHeight="17.0" prefWidth="663.0" text="Stornierung einer Reservation ist nur bis 30 Minuten vor Filmbeginn möglich!!!!!" AnchorPane.bottomAnchor="96.0" AnchorPane.leftAnchor="19.0" AnchorPane.rightAnchor="220.0" />
    </children>
 </AnchorPane>
