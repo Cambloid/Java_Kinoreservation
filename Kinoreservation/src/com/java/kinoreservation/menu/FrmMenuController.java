@@ -59,7 +59,9 @@ public class FrmMenuController implements Initializable {
         Stage stage = new Stage();
         
         controller.setTakenSeats(UserReservationCollection.getInstance().getAllTakenSeats());
+        controller.setStage(stage);
         controller.preview();
+        
         
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);

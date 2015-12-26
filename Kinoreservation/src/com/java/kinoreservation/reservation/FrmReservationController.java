@@ -157,7 +157,7 @@ public class FrmReservationController implements Initializable {
     }
     
     public void preview() {
-        this.btnSave.setVisible(false);
+        this.btnSave.setText("Schliessen");
         this.btnCancel.setVisible(false);
         
         this.preview = true;

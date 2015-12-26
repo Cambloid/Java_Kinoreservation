@@ -139,7 +139,8 @@ public class FrmUserControlController implements Initializable {
             
             if(!this.isCanceled) {
                 this.addPerson();
-            
+            } else {
+                this.isCanceled = false;
             }
             
             this.clearFiels();
