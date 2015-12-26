@@ -63,7 +63,7 @@ public class FrmReservationController implements Initializable {
     private void setState(Button btn, int index) {
         if(!preview) {
             if(btn.getStyle().equals("-fx-background-color: lightgreen;")) {
-                btn.setStyle("-fx-background-color: yellow;");
+                btn.setStyle("-fx-background-color: skyblue;");
                 this.customer[index] = true;
             } else {
                 btn.setStyle("-fx-background-color: lightgreen;");
