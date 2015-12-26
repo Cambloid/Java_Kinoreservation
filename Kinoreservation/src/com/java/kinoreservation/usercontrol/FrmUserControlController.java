@@ -71,7 +71,7 @@ public class FrmUserControlController implements Initializable {
     
     private boolean validateFields() {
         boolean valid = true;
-        String msg = "Die folgenden Felder dürfen nicht leer sei:\r\n";
+        String msg = "Die folgenden Felder dürfen nicht leer sein:\r\n";
         
         if(this.txtVorname.getText().equals("")) {
             msg += "Vorname\r\n";

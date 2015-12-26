@@ -7,10 +7,9 @@ package com.java.kinoreservation.reservation;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.Set;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
