@@ -7,7 +7,6 @@ package com.java.kinoreservation.reservation;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -140,7 +139,7 @@ public class FrmReservationController implements Initializable {
      }
     
     @Override public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
     }
     
     public boolean[] getSeats() {

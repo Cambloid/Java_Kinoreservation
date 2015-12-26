@@ -115,6 +115,7 @@ public class FrmUserControlController implements Initializable {
         
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
+        stage.setTitle("Sitzplatz reservieren");
         
         this.controller = (FrmReservationController)loader.getController();
         this.controller.setStage(stage);

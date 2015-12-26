@@ -31,6 +31,7 @@ public class Kinoreservation extends Application {
         FrmMenuController controller = (FrmMenuController)loader.getController();
         controller.setStage(stageMenu);
         
+        stageMenu.setTitle("Hauptmenü");
         stageMenu.initModality(Modality.APPLICATION_MODAL);
         stageMenu.setScene(scene);
         stageMenu.showAndWait();

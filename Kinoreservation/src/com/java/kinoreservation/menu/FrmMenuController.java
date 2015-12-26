@@ -38,6 +38,7 @@ public class FrmMenuController implements Initializable {
         
         Scene scene = new Scene(root);
         Stage stage = new Stage();
+        stage.setTitle("Kunden hinzufügen");
         
         FrmUserControlController controller = (FrmUserControlController)loader.getController();
         controller.setStage(stage);
@@ -62,6 +63,7 @@ public class FrmMenuController implements Initializable {
         
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.setScene(scene);
+        stage.setTitle("Freie Sitzplätze");
         
         stage.showAndWait();
     }
